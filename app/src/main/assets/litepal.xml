@@ -4,8 +4,8 @@
     <version value="1" />
 
     <list>
-        <maping class="com.qiuweather.android.db.Province" />
-        <maping class="com.qiuweather.android.db.City" />
-        <maping class="com.qiuweather.android.db.County" />
+        <maping class="com.example.qiuro.qiuweather.db.Province" />
+        <maping class="com.example.qiuro.qiuweather.db.City" />
+        <maping class="com.example.qiuro.qiuweather.db.County" />
     </list>
 </litepal>
