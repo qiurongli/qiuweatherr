@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QiuWeather</string>
+    <string name="forecast">forecast</string>
+    <string name="pm2_5">PM2.5</string>
+    <string name="aqi">AQI</string>
+    <string name="air">空气质量</string>
+    <string name="life">生活建议</string>
 </resources>
