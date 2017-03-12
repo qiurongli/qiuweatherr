@@ -1,5 +1,6 @@
 package com.example.qiuro.qiuweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.qiuro.qiuweather.gson.Forecast;
 import com.example.qiuro.qiuweather.gson.Weather;
+import com.example.qiuro.qiuweather.service.AutoUpdateService;
 import com.example.qiuro.qiuweather.util.HttpUtil;
 import com.example.qiuro.qiuweather.util.Utility;
 
@@ -191,7 +193,7 @@ public class WeatherActivity extends AppCompatActivity {
 
 
     /**
-     * 除了并展示Weather实体类中的数据
+     * 处理并展示Weather实体类中的数据
      *
      * @param weather
      */
@@ -229,6 +231,10 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
-
+        if (weather != null && "ok".equals(weather.status)) {
+            Intent intent = new Intent(this, AutoUpdateService.class);
+            startActivity(intent);
+            
+        }
     }
 }
